@@ -1,7 +1,7 @@
 #below 3 lines must be modified as needed
-file_filter = '*.txt'
-source_dirs = 'D:/src1/'
-destination_dir = 'D:/dest/'
+file_filter = '*.dwg'
+source_dirs = 'D:/10_Shigoto/05_Asia Projects Engineering Pte Ltd (APECO)/C1805 - PIPERACK/'
+destination_dir = 'D:/Test/Destination/'
 
 #actual script to copy the files
 from pathlib import Path
