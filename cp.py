@@ -9,12 +9,18 @@ import shutil
 import os
 
 print('Copying files...')
+rn = 0
 for sd in source_dirs.split(';'):
     for d in Path(sd).rglob(file_filter):
-        print(d)
-        _, fn = os.path.split(d)
+        #print(d)
+        base, fn = os.path.split(d)
         if not os.path.isfile(destination_dir + fn):
             shutil.copyfile(d, destination_dir + fn)
+            print('copied as : ' + str(d))
         else:
-            print('skipping, already exists on destination folder: ' + fn)
+            rn = rn + 1
+            fn, ext = os.path.splitext(fn)
+            fn = fn + '-duplicated-' + str(rn) + ext
+            shutil.copyfile(d, destination_dir + fn)
+            print('copied as : ' + base + '\\' + fn)
 print('Done')
