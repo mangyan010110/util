@@ -1,7 +1,7 @@
 #below 3 lines must be modified as needed
 file_filter = '*.dwg'
-source_dirs = 'D:\Test\000520 BODY;D:\Test\000510 SHELL'
-destination_dir = 'D:\Test\Destination'
+source_dirs = 'D:/Test/000520 BODY/;D:/Test/000510 SHELL/'
+destination_dir = 'D:/Test/Destination/'
 
 #actual script to copy the files
 from pathlib import Path
