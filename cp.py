@@ -14,3 +14,4 @@ for sd in source_dirs.split(';'):
         print(d)
         shutil.copyfile(d, destination_dir)
 print('Done')
+
