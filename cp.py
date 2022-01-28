@@ -3,11 +3,7 @@ import shutil
 import os
 import sys
 
-if len(sys.argv) != 2:
-    print('Invalid program arguments!!!')
-    sys.exit(1)
-
-file_filter = (sys.argv[1])
+file_filter = '*.dwg'
 configs = open('config.txt', 'r').readlines()
 
 print('Validating config.txt contents...')
