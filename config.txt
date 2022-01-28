@@ -1,0 +1,2 @@
+d:/src1/;d:/dest1/
+d:/src2/;d:/dest2/
