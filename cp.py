@@ -16,10 +16,11 @@ for c in configs:
     sd, dd = c.split(';')
     if not sd.strip().endswith('/') or not dd.strip().endswith('/'):
         ok = False
-    if '\\' in sd.strip() and '\\' in dd.strip():
+    if '\\' in sd.strip() or '\\' in dd.strip():
         ok = False
     if not ok:
-        print('Invalid content of config.txt file, please validate')
+        print('Invalid/missing char found on config.txt. ' \
+            'Replace all \\ with / and make sure all directory ends with /')
         sys.exit(1)
 
 print('Copying files with file extraction filter as : ' + file_filter)
